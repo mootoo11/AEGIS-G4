@@ -1,0 +1,72 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# AEGIS-G4 .gitignore — author: mootoo
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ⚠️  CRITICAL: Environment secrets — NEVER commit .env EVER
+.env
+*.env
+.env.*
+!.env.example
+secrets/
+
+# Exported findings (may contain PII / target data)
+aegis_findings_*.json
+findings/
+reports/
+
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Log files
+*.log
+aegis_g4.log
+
+# Playwright browser binaries (downloaded on setup)
+.playwright/
+
+# Output files (may contain sensitive data)
+ip_log4j.txt
+found_urls.txt
+validated_tokens.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/

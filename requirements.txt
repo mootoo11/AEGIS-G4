@@ -1,0 +1,37 @@
+# AEGIS-G4 — Production Dependencies (v3.0)
+# Gemma 4 Good Hackathon | Google DeepMind × Kaggle
+# Install: pip install -r requirements.txt
+# Browser:  playwright install chromium
+
+# ── Core Agent Framework ──────────────────────────────────────────────────────
+smolagents>=1.15.0          # Multi-agent orchestration + @tool decorator
+
+# ── Local Model Execution (Edge Computing Track → $10k prize) ────────────────
+ollama>=0.3.3               # Ollama Python SDK — runs Gemma 4 locally via llama.cpp
+
+# ── Web Intelligence & Capture ────────────────────────────────────────────────
+playwright>=1.44.0          # Async headless Chromium for page capture
+httpx>=0.27.0               # HTTP client (fast timeouts, circuit breakers)
+beautifulsoup4>=4.12.3      # HTML parsing and script extraction
+lxml>=5.2.0                 # Faster HTML parser for BeautifulSoup
+
+# ── Terminal UI (War Room Dashboard) ─────────────────────────────────────────
+textual>=0.80.0             # Interactive TUI — 4-panel war room dashboard
+rich>=13.7.0                # Rich markup, colored tables, progress bars
+
+# ── Data Modeling & Validation ────────────────────────────────────────────────
+pydantic>=2.7.0             # Typed report schemas (AbuseReport, TokenFinding, etc.)
+
+# ── Security & Configuration ──────────────────────────────────────────────────
+python-dotenv>=1.0.0        # .env loading (ZERO hardcoded secrets)
+
+# ── Async Support ─────────────────────────────────────────────────────────────
+aiofiles>=23.2.0            # Async file I/O for export
+Pillow>=10.3.0              # Image processing for screenshot encoding
+
+# ── Standard Library (no install needed — listed for documentation) ───────────
+# collections        — Counter, defaultdict (used in war_room_ui stats)
+# threading          — Circuit breaker lock, Playwright thread isolation
+# asyncio            — Playwright async context
+# dataclasses        — SwarmResult, Dork dataclasses
+# re                 — Credential pattern matching (regex-only, legal)
